@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Speactra — The Ridge</title>
+
+  <link rel="stylesheet" href="/style.css" />
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- NAVIGATION -->
+  <header class="nav">
+
+    <a href="#home" class="brand">
+      SPEACTRA<span>®</span>
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="#home">Home</a>
+      <a href="#bikes">Bikes</a>
+      <a href="#technology">Technology</a>
+      <a href="#about">About</a>
+      <a href="#support">Support</a>
+    </nav>
+
+    <button class="preorder nav-preorder" data-action="preorder">
+      Pre-order Now <i>↗</i>
+    </button>
+
+    <button
+      class="menu-button"
+      id="menuButton"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+    </button>
+
+  </header>
+
+
+  <!-- RIGHT SIDE MENU -->
+
+  <aside class="side-menu" id="sideMenu">
+
+    <div class="menu-top">
+      <span>MENU</span>
+
+      <button id="closeMenu">
+        ×
+      </button>
+    </div>
+
+    <nav>
+
+      <a href="#home">
+        <span>01</span>
+        <b>Home</b>
+      </a>
+
+      <a href="#bikes">
+        <span>02</span>
+        <b>Bikes</b>
+      </a>
+
+      <a href="#technology">
+        <span>03</span>
+        <b>Technology</b>
+      </a>
+
+      <a href="#about">
+        <span>04</span>
+        <b>About</b>
+      </a>
+
+      <a href="#support">
+        <span>05</span>
+        <b>Support</b>
+      </a>
+
+    </nav>
+
+    <div class="menu-bottom">
+      SPEACTRA / 2025 COLLECTION
+    </div>
+
+  </aside>
+
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+
+
+  <!-- MAIN -->
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero section" id="home">
+
+      <div class="hero-copy">
+
+        <p class="eyebrow">
+          SPEACTRA / 2025 COLLECTION
+        </p>
+
+        <h1>
+          RIDE THE<br>
+          <em>RIDGE.</em>
+        </h1>
+
+        <p class="hero-sub">
+          Engineered for the trail.<br>
+          Designed for everything beyond it.
+        </p>
+
+        <button class="preorder" data-action="preorder">
+          Pre-order Now <i>↗</i>
+        </button>
+
+      </div>
+
+
+      <div class="hero-meta">
+
+        <div>
+          <span>01</span>
+          <b>THE RIDGE</b>
+        </div>
+
+        <div>
+          <span>29"</span>
+          <b>WHEEL SIZE</b>
+        </div>
+
+      </div>
+
+
+      <!-- THREE.JS -->
+
+      <div id="scene"></div>
+
+
+      <div class="scene-hint">
+        DRAG TO EXPLORE <span>↔</span>
+      </div>
+
+
+      <div class="scroll-label">
+        SCROLL TO EXPLORE <span>↓</span>
+      </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="feature-strip section" id="bikes">
+
+      <div class="feature-intro">
+
+        <p class="eyebrow">
+          BUILT TO MOVE
+        </p>
+
+        <h2>
+          ONE BIKE.<br>
+          <em>NO LIMITS.</em>
+        </h2>
+
+      </div>
+
+
+      <div class="feature-grid">
+
+        <article>
+
+          <strong>01</strong>
+
+          <b>CONTROL</b>
+
+          <p>
+            160mm of confident travel keeps
+            the trail under control when
+            things get rough.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <strong>02</strong>
+
+          <b>WEIGHT</b>
+
+          <p>
+            A 13.2kg build keeps the Ridge
+            responsive without giving up
+            strength.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <strong>03</strong>
+
+          <b>POWER</b>
+
+          <p>
+            Trail-focused electric assistance
+            gives you the extra push for
+            bigger days.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- SPECS -->
+
+    <section class="specs section">
+
+      <div>
+
+        <p class="eyebrow">
+          THE NUMBERS
+        </p>
+
+        <h2>
+          PERFORMANCE<br>
+          <em>IN DETAIL.</em>
+        </h2>
+
+      </div>
+
+
+      <div class="spec-list">
+
+        <div>
+          <span>01 / TRAVEL</span>
+          <b>160 <small>MM</small></b>
+        </div>
+
+        <div>
+          <span>02 / WEIGHT</span>
+          <b>13.2 <small>KG</small></b>
+        </div>
+
+        <div>
+          <span>03 / MOTOR</span>
+          <b>250 <small>W</small></b>
+        </div>
+
+        <div>
+          <span>04 / TORQUE</span>
+          <b>85 <small>NM</small></b>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TECHNOLOGY -->
+
+    <section class="tech section" id="technology">
+
+      <div class="tech-visual">
+
+        <div class="orb"></div>
+
+        <div class="tech-line"></div>
+
+      </div>
+
+
+      <div class="tech-copy">
+
+        <p class="eyebrow">
+          UNDER THE HOOD
+        </p>
+
+        <h2>
+          FORM<br>
+          MEETS <em>FUNCTION.</em>
+        </h2>
+
+        <p>
+          Every component is placed with purpose.
+          A clean frame, balanced geometry and
+          trail-ready suspension create a machine
+          that feels planted, playful and precise.
+        </p>
+
+        <button class="text-button">
+          Explore technology <span>↗</span>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about section" id="about">
+
+      <div>
+
+        <p class="eyebrow">
+          SPEACTRA
+        </p>
+
+        <h2>
+          MADE FOR<br>
+          <em>MORE.</em>
+        </h2>
+
+      </div>
+
+
+      <p>
+
+        We build bicycles for riders who don't
+        want to choose between performance
+        and personality.
+
+        <br><br>
+
+        The Ridge is our answer:
+        minimal where it can be,
+        serious where it needs to be.
+
+      </p>
+
+    </section>
+
+
+    <!-- SUPPORT -->
+
+    <section class="support section" id="support">
+
+      <div>
+
+        <p class="eyebrow">
+          READY WHEN YOU ARE
+        </p>
+
+        <h2>
+          FIND YOUR<br>
+          <em>RIDGE.</em>
+        </h2>
+
+      </div>
+
+
+      <button class="preorder large" data-action="preorder">
+        Pre-order Now <i>↗</i>
+      </button>
+
+    </section>
+
+  </main>
+
+
+  <!-- PREORDER MODAL -->
+
+  <div class="modal" id="modal">
+
+    <div class="modal-card">
+
+      <button id="modalClose">
+        ×
+      </button>
+
+      <p class="eyebrow">
+        RIDGE
+      </p>
+
+      <h2>
+        PRE-ORDER<br>
+        <em>INTEREST.</em>
+      </h2>
+
+      <p>
+        Leave your email and we'll keep you updated
+        on the next Ridge release.
+      </p>
+
+      <form id="interestForm">
+
+        <input
+          type="email"
+          placeholder="you@example.com"
+          required
+        />
+
+        <button type="submit">
+          Notify me ↗
+        </button>
+
+      </form>
+
+      <small id="formMessage"></small>
+
+    </div>
+
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>
